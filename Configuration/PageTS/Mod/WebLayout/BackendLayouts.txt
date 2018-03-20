@@ -1,0 +1,4 @@
+#
+# BACKENDLAYOUTS
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:hof_wessels_template/Configuration/PageTS/Mod/WebLayout/BackendLayouts" extensions="txt">

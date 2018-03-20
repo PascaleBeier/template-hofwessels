@@ -1,0 +1,7 @@
+#
+# PageTS for Hof Wessels Template
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hof_wessels_template/Configuration/PageTS/RTE.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hof_wessels_template/Configuration/PageTS/TCEFORM.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hof_wessels_template/Configuration/PageTS/TCEMAIN.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hof_wessels_template/Configuration/PageTS/Mod/WebLayout/BackendLayouts.txt">

@@ -1,0 +1,37 @@
+#
+# BACKENDLAYOUT: DEFAULT
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            hof_wessels_template_default {
+                title = Standard
+                config {
+                    backend_layout {
+                        colCount = 3
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Linke Spalte
+                                        colPos = 1
+                                    }
+                                    2 {
+                                        name = Hauptspalte
+                                        colPos = 0
+                                    }
+                                    3 {
+                                        name = Rechte Spalte
+                                        colPos = 2
+                                    }
+                                }
+                            }
+                        }
+                      }
+                }
+                icon = EXT:hof_wessels_template/Resources/Public/Images/BackendLayouts/default.png
+            }
+        }
+    }
+}

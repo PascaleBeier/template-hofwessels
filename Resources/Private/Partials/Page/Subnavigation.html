@@ -1,0 +1,28 @@
+<nav id="subnavigation" role="navigation" class="nav flex-column">
+    <f:if condition="{subnavigation}">
+        <f:then>
+            <f:for each="{subnavigation}" as="subnavigationItem">
+                <a class="btn btn-brown{f:if(condition: subnavigationItem.active, then:' active')}"
+                   href="{subnavigationItem.link}" target="{subnavigationItem.target}" title="{subnavigationItem.title}">
+                    {subnavigationItem.title}
+                    <f:if condition="{subnavigationItem.active}">
+                        <span class="sr-only">(Sie befinden sich hier)</span>
+                    </f:if>
+                </a>
+            </f:for>
+        </f:then>
+        <f:else>
+            <f:for each="{fallbacksubnavigation}" as="subnavigationItem">
+                <a class="btn btn-brown{f:if(condition: subnavigationItem.active, then:' active')}"
+                   href="{subnavigationItem.link}" target="{subnavigationItem.target}" title="{subnavigationItem.title}">
+                    {subnavigationItem.title}
+                    <f:if condition="{subnavigationItem.active}">
+                        <span class="sr-only">(Sie befinden sich hier)</span>
+                    </f:if>
+                </a>
+            </f:for>
+        </f:else>
+
+    </f:if>
+
+</nav>

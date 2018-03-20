@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="row mt-2 mb-0">
+        <div class="col-md-3 d-none d-md-block">
+            <f:image src="fileadmin/logos/hof-wessels.svg" class="d-inline-block align-top" width="197"
+            alt="Logo des Hof Wessels"/>
+        </div>
+        <div class="col-md-9 px-0">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3', pageUid: 1}" />
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
+        <f:link.page pageUid="1" class="navbar-brand d-block d-md-none">
+            <f:image src="fileadmin/logos/hof-wessels.svg" class="d-inline-block align-top" width="197"
+                     alt="Logo des Hof Wessels"/>
+        </f:link.page>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnavigation"
+                aria-controls="mainnavigation" aria-expanded="false" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainnavigation">
+
+            <ul class="navbar-nav ml-auto">
+                <f:for each="{mainnavigation}" as="mainnavigationItem">
+                    <li class="nav-item{f:if(condition: mainnavigationItem.active, then:' active')}">
+                        <a class="nav-link" href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
+                            {mainnavigationItem.title}
+                            <f:if condition="{mainnavigationItem.active}">
+                                <span class="sr-only">(Sie befinden sich hier)</span>
+                            </f:if>
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </nav>
+</div>

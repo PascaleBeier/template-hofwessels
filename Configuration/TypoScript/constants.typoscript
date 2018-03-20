@@ -1,0 +1,67 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:hof_wessels_template/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:hof_wessels_template/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:hof_wessels_template/Resources/Private/Templates/ContentElements/
+    }
+
+    content.textmedia.linkWrap {
+        lightboxCssClass = sd-lightbox
+        lightboxRelAttribute = sd-lightbox[{field:uid}]
+        lightboxEnabled = 1
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:hof_wessels_template/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:hof_wessels_template/Resources/Private/Partials/Page/
+        templateRootPath = EXT:hof_wessels_template/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+plugin.tx_wsflexslider {
+    includejquerycore = 0
+    carousel = 1
+}
+
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    removeDefaultJS = 0
+    admPanel = 0
+    prefixLocalAnchors = 0
+    headerComment = Diese Webseite wurde erstellt von Pascale Beier <mail@pascalebeier.de> https://pascalebeier.de
+    sendCacheHeaders = 1
+}
